@@ -1,0 +1,19 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}.hiro-contener{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 7px;
+}.my-img-profille img{
+    border-radius: 50%;
+}.icons-linck img{
+    height: 5vh;
+    margin-top: 10px;
+    margin: 5px;
+    transition: all 0.3s ease;
+}.icons-linck img:hover{
+    transform: rotate(-45deg) scale(1.1);
+}

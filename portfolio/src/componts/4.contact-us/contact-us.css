@@ -1,0 +1,48 @@
+/* تحسين الحاوية الرئيسية */
+.contener {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    gap: 20px;
+}
+
+/* تحسين حقول الإدخال */
+.Contact-Us-text input, 
+.Contact-Us-text textarea {
+    display: block;
+    width: 95%;
+    padding: 10px;
+    margin: 10px 0; /* تحسين المسافات بين الحقول */
+    background-color: rgb(5, 0, 28);
+    border: 2px solid var(--border);
+    border-radius: 5px;
+    color: white;
+    outline: none; /* إزالة الحدود المزعجة عند الضغط */
+}
+
+/* تحسين زر الإرسال */
+button[type="submit"] {
+    width: 95%; /* توحيد العرض مع الحقول */
+    background-color: #0066ff; /* لون أزرق أكثر حيوية */
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: #004a99;
+}
+
+button[type="submit"]:active {
+    transform: scale(0.98); /* ضغطة خفيفة تعطي إحساساً بالتفاعل */
+}
+
+/* تحسين الصورة في الموبايل */
+@media (max-width: 768px) {
+    .contener { flex-direction: column; }
+    .Contact-Us-img { display: none; }
+}

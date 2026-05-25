@@ -1,0 +1,114 @@
+header nav, header{
+    display: flex;
+    justify-content: center; /* سنتر كل شيء في المنتصف */
+    align-items: center;
+    gap: 10px; /* مسافة بسيطة بين الروابط والزر */
+    flex-wrap: wrap; /* هذا هو السر: إذا ضاقت الشاشة، سينزل الزر للسطر التالي تلقائياً */
+    padding: 10px;
+}header {
+    display: flex;
+    justify-content: space-between; /* هذا يوزع الزر والروابط */
+    align-items: center;
+    padding: 15px 30px; /* إضافة مساحة من الجوانب */
+}
+ul{
+    list-style: none;
+    display: flex;
+}ul li{
+    margin: 5px;
+}
+.ul {
+    display: flex;
+    background-color: black;
+    border-radius: 20px;
+    padding: 5px;
+    margin: 0;
+    flex-wrap: wrap; /* لضمان نزول الروابط للسطر التالي إذا ضاقت الشاشة */
+    justify-content: center;
+}
+
+.ul li {
+    margin: 5px;
+    background-color: rgb(60, 64, 68);
+    border-radius: 20px;
+    padding: 5px 10px;
+}
+button{
+    border: 2px solid var(--border);
+    transition: 0.3s;
+}button[class="moon"]:hover, button[class="show-model"]:hover{
+    border: 2px solid rgb(227, 143, 20);
+    color: white;
+}
+.moon {
+    background-color: rgb(49, 49, 49);
+    color: rgb(220, 220, 220);
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+li a {
+    text-decoration: none;
+    color: white; /* تأكد من تغيير اللون ليظهر على الخلفية الداكنة */
+}/* هذا يضمن أن القائمة المنسدلة تأخذ خصائصها الخاصة فقط */
+.model-border {
+    display: block !important;       /* إجبارها على أن تكون فليكس */
+    flex-direction: column !important; /* إجبارها على الترتيب العمودي */
+    list-style: none !important;
+    position: absolute;
+    top: 20px;
+    padding: 20px !important;
+    margin: 0 !important;
+    background-color: rgb(30, 30, 30);
+    border: none;
+    width: 90vh;
+    border-radius: 20px;
+}
+
+/* التأكد من أن عناصر الـ li داخل الموديل تظهر بشكل عمودي */
+.model-border li {
+    margin: 10px 0 !important; 
+    display: block !important;
+    font-size: 20px;
+}.model-border li a:hover{
+    color: rgba(100, 120, 255, 1);
+}
+.show-model {
+   display: none; /* سيبقى مخفياً في الشاشات الكبيرة */
+    padding: 10px;
+   border-radius: 50%;
+   border: 1px solid black;
+   color: rgb(165, 165, 165);  /* غيرت اللون لأسود ليظهر */
+   background-color: rgb(48, 48, 48); /* خلفية فاتحة */
+}.model-border hr{
+    border: 1px solid rgba(128, 128, 128, 0.3);
+}
+
+@media (max-width: 533px) {
+    nav {
+        display: none !important;
+    }
+    .show-model {
+        display: block !important;
+        
+    }
+}.close{
+    border-radius: 50%;
+    height: 30px;
+    width: 30px;
+    font-size: 30px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    transition: all 0.8s ease;
+    margin: 5px;
+}.close:active{
+    transform: rotate(180deg);
+    scale: 0.9;
+}.model-border div{
+    display: flex;
+    justify-content: space-between;
+}

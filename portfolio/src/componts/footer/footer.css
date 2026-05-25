@@ -1,0 +1,25 @@
+.footer {
+    padding: 40px 20px;
+    background-color: ;
+    border-top: 1px solid var(--border);
+    
+    /* هذا الجزء هو المسؤول عن التوسيط */
+    display: flex;
+    flex-direction: column; /* لترتيب القائمة ثم حقوق النشر تحت بعض */
+    align-items: center;    /* توسيط أفقي لكل العناصر */
+    justify-content: center; /* توسيط عمودي */
+}
+
+.footer-links {
+    list-style: none;
+    display: flex;
+    gap: 30px; 
+    padding: 0;
+    margin: 0 0 20px 0; /* مسافة تحت القائمة */
+}
+
+.copyright {
+    color: #777;
+    font-size: 14px;
+    margin: 0; /* التأكد من عدم وجود مسافات جانبية تجعله ينزاح */
+}

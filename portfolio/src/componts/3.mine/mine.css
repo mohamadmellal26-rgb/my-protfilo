@@ -1,0 +1,69 @@
+.contener{
+    display: flex;
+    justify-content: space-between;
+}
+.card-projct{
+    margin: 10px;
+    border: 2px solid var(--border);
+    border-radius: 20px;
+    padding: 10px;
+    transition: 0.3s;
+    background-color: var(--scondey);
+}.card-projct:hover{
+    transform: scale(1.01) translateY(-5px);
+}
+.more-link{
+    color: rgba(0, 102, 255, 0.733);
+}.project-filter-list {
+    display: flex;
+    flex-direction: column; /* صف واحد */
+    justify-content: center;
+    gap: 3px;           /* مسافات متساوية بين الأزرار */
+    padding: 0;
+}
+.filter-item:hover{
+    border: 1px solid blue;
+}
+
+.filter-item {
+    flex: 1;             /* كل زر يأخذ نفس المساحة من الـ container */
+    text-align: center;  /* توسيط النص داخل كل زر */
+    white-space: nowrap; /* منع النص من النزول لسطر جديد */
+    
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--scondey);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}.card-projct img{
+    height: 20%;
+    width: 50%;
+}/* 1. تنسيق الصورة داخل الكارد */
+.card-projct img {
+    width: 100%;       /* اجعلها تأخذ كامل عرض الكارد */
+    height: 180px;     /* ارتفاع ثابت لكل الصور ليكون الكارد متناظراً */
+    object-fit: cover; /* سر المحترفين: تجعل الصورة تملأ المساحة دون أن تتشوه */
+    border-radius: 10px 10px 0 0; /* حواف دائرية للجزء العلوي فقط */
+}
+
+/* 2. تنسيق الكارد نفسه */
+.card-projct {
+    width: 300px;      /* عرض ثابت للكارد لضمان ترتيبهم بجانب بعض */
+    margin: 10px;
+    border: 2px solid var(--border);
+    border-radius: 20px;
+    overflow: hidden;  /* يضمن أن الصورة لا تخرج عن حدود الـ border-radius */
+    transition: 0.3s;
+    background-color: var(--scondey);
+}/* استهدف أي أيقونة (سواء كانت i أو img صغيرة) داخل حاوية card-icons */
+.card-icons {
+    display: flex;
+    gap: 10px; /* مسافة مريحة بين الأيقونات */
+    align-items: center;
+}
+
+
+.card-icons a{
+   scale: 1.3;
+}

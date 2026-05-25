@@ -1,0 +1,30 @@
+:root{
+  --primary: #000;
+  --scondey: rgb(69, 67, 67);
+  --border: #232323;
+}.ligth{
+  --primary: #ffff;
+}*{
+  margin: 0;
+  padding: 0;
+  color: white;
+   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+body{
+  background-color: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}.container{
+  background-color: rgb(29, 29, 29);
+  width: auto;
+  border: 2px solid var(--border);
+}button{
+  cursor: pointer;
+}button:active{
+  scale: 0.90;
+}a{
+  text-decoration: none;
+}hr{
+  color: rgb(94, 93, 93);
+}
